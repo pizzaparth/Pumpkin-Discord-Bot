@@ -1,27 +1,60 @@
-ONI CHAN
+# Pumpkin - Discord Bot Manual
 
-CORE FUNCTIONALITIES ---
-    1. Filter messages:
-        a. It automatically filters those messages and deletes them which contain any sort of abusive language.
+## CORE FUNCTIONALITIES
 
-    2. Timeout/mute:
-        b. To call for muting someone, the moderator can use $mute{<userid>}{<time>}{reason}
-        c. During the timeout, the user cannot send messages in any chatroom.
+### 1. Filter Messages
+- Automatically filters and deletes messages containing abusive language from the BANNED_WORDS list
+- Notifies the user when their message is removed
+- Command: Automatic (no command needed)
 
-    3. Bans:
-        a. The bot can ban users if they decide to send messages which contain toxic words or phrases. 
-        b. Once the user is banned, the user will not be able to join the server, until a moderator decides to unban the same user.
-        c. Command - $ban{<userid>}{<reason>}
-    
-    4. Kick:
-        a. Just a functionality, in case we want the user to be out of the server but not permanently.
-        b. Use case: To remove the inactive account.
-        c. Command: $kick{<userid>}{<reason>}
+### 2. Timeout/Mute
+- Moderators can mute a user using Discord's native timeout feature
+- During timeout, the user cannot send messages in the server
+- Command: `!mute @user duration_in_seconds`
+- Unmute Command: `!unmute @user`
+- Requires `moderate_members` permission
 
-    5. Set AFK:
-        a. This command can be used by anyone. 
-        b. If someone pings you, it lets the other person that you are AFK.
-        c. Command - $afk{<reason>}
-        d. The afk can be removed once the user who used it sends a message in the chat.
-        e. Once the user is back from afk and sends a message, the bot will send a greetings message.
-        
+### 3. Bans
+- The bot can ban users who send messages containing toxic words or phrases
+- Once banned, the user cannot join the server until unbanned by a moderator
+- Ban Command: `!ban @user [reason]`
+- Unban Command: `!unban <user_id>`
+- Requires `ban_members` permission
+
+### 4. Kick
+- Removes a user from the server without permanent ban
+- Use case: Removing inactive accounts or problematic users temporarily
+- Command: `!kick @user [reason]`
+- Requires `kick_members` permission
+
+### 5. Set AFK (Away From Keyboard)
+- Any user can set themselves as AFK
+- When pinged while AFK, the bot notifies the pinger that the user is away
+- Command: `!afk <duration_in_minutes>`
+- The AFK status is automatically removed after the specified duration
+- When the user returns and sends a message, the AFK role is removed and a status notification is sent
+
+## COMMAND REFERENCE
+
+| Command | Usage | Permission Required | Description |
+|---------|-------|---------------------|-------------|
+| !mute | !mute @user seconds | moderate_members | Timeout a user for specified duration |
+| !unmute | !unmute @user | moderate_members | Remove timeout from a user |
+| !ban | !ban @user [reason] | ban_members | Permanently ban a user from server |
+| !unban | !unban <user_id> | ban_members | Remove a ban for a user |
+| !kick | !kick @user [reason] | kick_members | Remove a user from server (non-permanent) |
+| !afk | !afk <minutes> | None (all users) | Set yourself as AFK |
+
+## SETUP REQUIREMENTS
+
+- Create a Discord bot and add it to your server
+- Ensure the bot has the necessary permissions: Manage Messages, Moderate Members, Manage Roles, Ban/Kick Members
+- Create an AFK role in your Discord server (optional, for AFK functionality)
+- Store your Discord bot token in a `keys.env` file with the variable `TOKEN=your_token_here`
+
+## ADDITIONAL FEATURES
+
+- Simple greeting responses to "hello" and "hi" messages
+- Automatic message deletion for messages containing banned words
+- User notification when AFK users are mentioned
+- Comprehensive error handling and permission checks
