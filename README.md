@@ -60,30 +60,7 @@ A comprehensive Discord bot designed to maintain a healthy server environment th
    pip install discord.py python-dotenv
    ```
 
-3. **Create a Discord Application**
-   - Go to [Discord Developer Portal](https://discord.com/developers/applications)
-   - Click "New Application" and name it "Pumpkin"
-   - Navigate to "Bot" section and click "Add Bot"
-   - Copy the bot token
-
-4. **Create configuration file**
-   Create a `keys.env` file in the project root:
-   ```
-   TOKEN=your_bot_token_here
-   ```
-
-5. **Set bot permissions**
-   - In Developer Portal, go to OAuth2 → URL Generator
-   - Select scopes: `bot`
-   - Select permissions:
-     - Manage Messages
-     - Moderate Members
-     - Manage Roles
-     - Kick Members
-     - Ban Members
-   - Use the generated URL to add the bot to your server
-
-6. **Run the bot**
+3. **Run the bot**
    ```bash
    python main.py
    ```
@@ -114,13 +91,13 @@ For full AFK functionality:
 
 | Command | Usage | Permission | Description |
 |---------|-------|-----------|-------------|
-| `!mute` | `!mute @user <seconds>` | Moderate Members | Timeout a user |
-| `!unmute` | `!unmute @user` | Moderate Members | Remove timeout |
-| `!ban` | `!ban @user [reason]` | Ban Members | Permanently ban a user |
-| `!unban` | `!unban <user_id>` | Ban Members | Unban a user |
-| `!kick` | `!kick @user [reason]` | Kick Members | Remove user from server |
+| `!mute` | `!mute @user <seconds>` | Moderator/Admin | Mute/Timeout a user |
+| `!unmute` | `!unmute @user` | Moderator/Admin | Remove timeout |
+| `!ban` | `!ban @user [reason]` | Moderator/Admin | Permanently ban a user |
+| `!unban` | `!unban <user_id>` | Moderator/Admin | Unban a user |
+| `!kick` | `!kick @user [reason]` | Moderator/Admin | Remove user from server |
 
-### User Commands
+### User Commands - I am working on adding more user commands.
 
 | Command | Usage | Permission | Description |
 |---------|-------|-----------|-------------|
@@ -204,7 +181,7 @@ This project is open source and available under the MIT License.
 
 ## Credits
 
-Developed by the Pumpkin Bot Team. Built with discord.py library.
+Developed by Parth Pancholi. Built with discord.py library.
 
 ---
 
