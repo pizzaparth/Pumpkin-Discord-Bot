@@ -71,7 +71,7 @@ class Client(discord.Client):
                         break
 
         # Simple greetings
-        if message.content.lower().startswith(("hello", "hi")):
+        if message.content.lower().startswith(("hello", "hi", "Hello", "Hi")):
             await message.reply("Hi")
             return
 
