@@ -173,7 +173,7 @@ The bot includes comprehensive error handling for:
 
 ## Support
 
-For issues or feature requests, please open an issue in the repository or contact the development team.
+For issues or feature requests, please open an issue in the repository or contact github.com/pizzaparth.
 
 ## License
 
