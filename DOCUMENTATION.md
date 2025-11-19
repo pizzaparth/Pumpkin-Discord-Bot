@@ -75,11 +75,6 @@ pip install discord.py python-dotenv
    ```
 3. Replace `your_bot_token_here` with the token you copied
 
-**Example:**
-```
-TOKEN=MTIzNDU2Nzg5MDEyMzQ1Njc4OQ.GaBcDe.FgHiJkLmNoPqRsTuVwXyZ123456789
-```
-
 ### Step 3: Invite Bot to Your Server
 
 1. In Discord Developer Portal, go to "OAuth2" → "URL Generator"
