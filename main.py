@@ -1,3 +1,4 @@
+# Imports ------------------------
 import discord
 from discord.ext import commands
 from discord import app_commands
@@ -6,28 +7,26 @@ from dotenv import load_dotenv
 import asyncio
 import discord.utils
 from datetime import timedelta
+#---------------------------------
 
 
-# Load environment variables from .env file
+# Token configuration ------------------------------
 load_dotenv(dotenv_path="keys.env")
-
-
-# Get the token from the environment variable
 token = os.getenv("TOKEN")
-
-
 if token is None:
     print("Error: TOKEN not found in .env file!")
     exit(1)
+#---------------------------------------------------
 
 
-# List of abusive/banned words (add your words here)
+# List of abusive/banned words ----
 BANNED_WORDS = [
     "badword1",
     "badword2",
     "offensive",
     # Add more words as needed
 ]
+#----------------------------------
 
 
 class Client(discord.Client):
@@ -40,7 +39,7 @@ class Client(discord.Client):
 
     async def on_message(self, message):
         print(f"Message from user: {message.author} : {message.content}")
-        if message.author == self.user:
+        if message.author == self.user: #
             return
 
         # Word filtering - check for banned words
@@ -76,7 +75,7 @@ class Client(discord.Client):
             await message.reply("Hi")
             return
 
-        # AFK command: !afk @user duration_in_seconds
+        # AFK command: !afk duration_in_minutes
         if message.content.startswith("!afk"):
 
             parts = message.content.split()
