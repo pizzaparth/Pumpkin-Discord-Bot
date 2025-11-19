@@ -34,17 +34,6 @@
 - The AFK status is automatically removed after the specified duration
 - When the user returns and sends a message, the AFK role is removed and a status notification is sent
 
-## COMMAND REFERENCE
-
-| Command | Usage | Permission Required | Description |
-|---------|-------|---------------------|-------------|
-| !mute | !mute @user seconds | moderate_members | Timeout a user for specified duration |
-| !unmute | !unmute @user | moderate_members | Remove timeout from a user |
-| !ban | !ban @user [reason] | ban_members | Permanently ban a user from server |
-| !unban | !unban <user_id> | ban_members | Remove a ban for a user |
-| !kick | !kick @user [reason] | kick_members | Remove a user from server (non-permanent) |
-| !afk | !afk <minutes> | None (all users) | Set yourself as AFK |
-
 ## SETUP REQUIREMENTS
 
 - Create a Discord bot and add it to your server
