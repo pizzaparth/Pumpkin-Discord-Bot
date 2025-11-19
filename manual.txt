@@ -1,0 +1,29 @@
+ONI CHAN
+
+CORE FUNCTIONALITIES ---
+    1. Filter messages:
+        a. It automatically filters those messages and deletes them which contain any sort of abusive language.
+        b. The user will be sent in timeout (will be muted) for 1 hour if the offence is repeated 5 times. 
+
+    2. Timeout/mute:
+        a. The user can be muted if the user decides to send prohibited words/phrases 5 times for 1 hour.
+        b. To call for muting someone, the moderator can use $mute{<userid>}{<time>}{reason}
+        c. During the timeout, the user cannot send messages in any chatroom.
+
+    3. Bans:
+        a. The bot can ban users if they decide to send messages which contain toxic words or phrases. 
+        b. Once the user is banned, the user will not be able to join the server, until a moderator decides to unban the same user.
+        c. Command - $ban{<userid>}{<reason>}
+    
+    4. Kick:
+        a. Just a functionality, in case we want the user to be out of the server but not permanently.
+        b. Use case: To remove the inactive account.
+        c. Command: $kick{<userid>}{<reason>}
+
+    5. Set AFK:
+        a. This command can be used by anyone. 
+        b. If someone pings you, it lets the other person that you are AFK.
+        c. Command - $afk{<reason>}
+        d. The afk can be removed once the user who used it sends a message in the chat.
+        e. Once the user is back from afk and sends a message, the bot will send a greetings message.
+        
