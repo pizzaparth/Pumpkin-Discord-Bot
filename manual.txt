@@ -3,10 +3,8 @@ ONI CHAN
 CORE FUNCTIONALITIES ---
     1. Filter messages:
         a. It automatically filters those messages and deletes them which contain any sort of abusive language.
-        b. The user will be sent in timeout (will be muted) for 1 hour if the offence is repeated 5 times. 
 
     2. Timeout/mute:
-        a. The user can be muted if the user decides to send prohibited words/phrases 5 times for 1 hour.
         b. To call for muting someone, the moderator can use $mute{<userid>}{<time>}{reason}
         c. During the timeout, the user cannot send messages in any chatroom.
 
