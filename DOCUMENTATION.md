@@ -77,6 +77,7 @@ pip install discord.py python-dotenv
 
 ### Step 3: Invite Bot to Your Server
 
+
 1. In Discord Developer Portal, go to "OAuth2" → "URL Generator"
 2. Under **Scopes**, check:
    - `bot`
