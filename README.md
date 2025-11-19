@@ -1,4 +1,5 @@
 # Pumpkin - Discord Moderation Bot
+# Made by - Parth Pancholi
 
 A comprehensive Discord bot designed to maintain a healthy server environment through automated message filtering, user moderation tools, and AFK status management.
 
