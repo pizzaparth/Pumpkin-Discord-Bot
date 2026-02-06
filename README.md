@@ -5,34 +5,34 @@ A comprehensive Discord bot designed to maintain a healthy server environment th
 
 ## Features
 
-### 🛡️ Message Filtering
+### Message Filtering
 - Automatically detects and removes messages containing banned words
 - Customizable banned words list
 - Instant user notification when messages are filtered
 - Logging of deleted messages for moderation review
 
-### ⏱️ Timeout/Mute System
+### Timeout/Mute System
 - Native Discord timeout implementation
 - Moderators can mute users for specified durations
 - Users cannot send messages while muted
 - Easy unmute functionality with `!unmute` command
 - Non-permanent solution for temporary user restrictions
 
-### 🚫 Ban Management
+### Ban Management
 - Permanent user bans with custom reasons
 - Automatic ban on detected toxic content
 - Unban functionality using user IDs
 - Prevents banned users from rejoining the server
 - Requires `ban_members` permission
 
-### 👢 Kick Functionality
+### Kick Functionality
 - Temporary user removal without permanent ban
 - Ideal for removing inactive members
 - Custom kick reasons with logging
 - Users can rejoin after being kicked
 - Requires `kick_members` permission
 
-### 🚫 AFK Status
+### AFK Status
 - Users can set themselves as Away From Keyboard
 - Customizable AFK duration
 - Automatic AFK role assignment
